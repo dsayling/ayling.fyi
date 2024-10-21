@@ -1,0 +1,1223 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Drew Ayling</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+blockquote {
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #eb5f51;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.section > section > section {
+  margin-bottom: 1rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  #profiles a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 1em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  ul.keywords::before {
+    content: "Skills acquired: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Drew Ayling</h1>
+    			<h2 class="label">DevOps Connoisseur, Python Enthusiast, System Architect</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="city">Denver Metro Area,</span>
+    			<span class="region">Colorado</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="far fa-envelope"></span>
+    				<a class="hide-href-print" href="mailto:dsayling@gmail.com">dsayling@gmail.com</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/dsayling">dsayling</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/drew-ayling">Drew Ayling</a>
+    					</span>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section">
+    		<section class="main-summary">
+    			<div><p><p>Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in DevOps, Software Architecture, Automated Software Testing, Software Delivery, and Compliance Testing. Core values in product focused delivery and bridging communication gaps between development, quality, release, and support in Enterprise agile environments. Likes the feel of startups. macOS/Linux guy that runs WSL if I must. Python Developer that used to dabble in C++, Perl, and JS. DevOps is for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people.</p></p></div>
+    		</section>
+    	</section>
+    
+    <section class="section">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Development
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>Python</li>
+    				<li>Typescript / React</li>
+    				<li>Go</li>
+    				<li>Bash</li>
+    				<li>Linux / OSX</li>
+    				<li>Docker / Kubernetes</li>
+    				<li>Saltstack / Ansible / Terraform</li>
+    				<li>Jenkins / CircleCI / Github Actions</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Competencies
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>DevOps</li>
+    				<li>Value Stream</li>
+    				<li>Process Automation</li>
+    				<li>Web Services</li>
+    				<li>Open Standards</li>
+    				<li>Software Testing</li>
+    				<li>Scaled Agile / SAFe</li>
+    				<li>System Architecture</li>
+    				<li>Storage Appliances</li>
+    				<li>Embedded Systems</li>
+    				<li>Software Integration</li>
+    				<li>Value Streams</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(8)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+          <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Apr 2023</span>
+              <span class="endDate">- Current</span>
+            </div>
+            <div class="position">Staff Software Engineer</div>
+            <div class="company">Ford Motor Company</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://ford.com">http://ford.com</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>Replace this tiny tool called PREEVision</p></p></div>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-1"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Mar 2021</span>
+              <span class="endDate">- Apr 2023</span>
+            </div>
+            <div class="position">Staff Software Engineer</div>
+            <div class="company">Teladoc Health</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://teladochealth.com">http://teladochealth.com</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>Leading automation architecture team for the chronic care management group. Supporting test reporting, CI integrations, testing libraries, development pipelines and more.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Leading the automation architecture team to re-architect existing test frameworks to align newly acquired product’s delivery with the larger Teladoc org to reduce automation duplication and scale product delivery.</p></p></li>
+              <li><p><p>Leading an automation guild to present vision, intent, best practices, and architectural runway for testing and automation.</p></p></li>
+              <li><p><p>Created automated tooling to connect Teladoc’s automated test cases with TestRail’s test case management software to measure requirements and functional coverage. Contributing to open source projects to support this effort.</p></p></li>
+              <li><p><p>Worked with partner organizations and customers to create and maintain their own CI libraries for CircleCI, ranging from go-to-market assistance to paired programming with partner company developers.</p></p></li>
+              <li><p><p>Creating and maintaining test automation libraries for Livongo (Chronic Care Management) (acquired by Teladoc in 2020) products including web, mobile, backend, and ETL.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-2"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jun 2020</span>
+              <span class="endDate">- Mar 2021</span>
+            </div>
+            <div class="position">Community &amp; Partner Engineer</div>
+            <div class="company">CircleCI</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://circleci.dev">http://circleci.dev</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>Working with customers and partners in our open-source community to produce and maintain CircleCI ecosystem assets.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Launched the CircleCI Developer Hub, a K8s microsite for CircleCI assets (Docker images and CI integrations), as a full-stack developer in React and Go.</p></p></li>
+              <li><p><p>Created and maintained CI libraries for dozens of languages and frameworks, e.g. Ruby, GKE, Python, Terraform, used by thousands of runs daily.</p></p></li>
+              <li><p><p>Supported open source community Docker images spanning various languages and frameworks, e.g. Python, Ruby, Android, Selenium, for use on CircleCI, each being used in almost 100,000 runs a week.</p></p></li>
+              <li><p><p>Worked with partner organizations and customers to create and maintain their own CI libraries for CircleCI, ranging from go-to-market assistance to paired programming with partner company developers.</p></p></li>
+              <li><p><p>Primary lead on restructuring CircleCI sample apps and configuration files to improve CircleCI onboarding experience.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-3"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jun 2019</span>
+              <span class="endDate">- Jun 2020</span>
+            </div>
+            <div class="position">Sr. Software Engineer</div>
+            <div class="company">NetApp - SolidFire</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://docs.netapp.com/us-en/element-software-123/storage/concept_intro_solidfire_system_overview.html">https://docs.netapp.com/us-en/element-software-123/storage/concept_intro_solidfire_system_overview.html</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.</p></p></li>
+              <li><p><p>Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.</p></p></li>
+              <li><p><p>Architected end to end container and Kubernetes based serverless testing solution for disparate disconnected system tests that removed hundreds of manual hours for each release.</p></p></li>
+              <li><p><p>Coached other system architects in scaled agile best practices to enable predictable planning by reducing lead time in exploration phase by 75%.</p></p></li>
+              <li><p><p>Architected organizational value stream alignment with other system architects and SAFe practitioners to restructure the teams around value in order to increase delivery to the customer by a factor of 6.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-4"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jul 2015</span>
+              <span class="endDate">- Jun 2019</span>
+            </div>
+            <div class="position">Software Engineer</div>
+            <div class="company">NetApp - SolidFire</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://docs.netapp.com/us-en/element-software-123/storage/concept_intro_solidfire_system_overview.html">https://docs.netapp.com/us-en/element-software-123/storage/concept_intro_solidfire_system_overview.html</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test automation engineer's pespective</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest</p></p></li>
+              <li><p><p>Scrum master, architect and product owner for re-architecture of internal legacy automation python code base</p></p></li>
+              <li><p><p>Automated systems administration tasks such as system monitoring, report generation, code deployment, package management, and server maintenance</p></p></li>
+              <li><p><p>Designed and developed REST API SDK for external test case management software for use across multiple teams.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-5"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Sep 2014</span>
+              <span class="endDate">- Jul 2015</span>
+            </div>
+            <div class="position">Research Engineer</div>
+            <div class="company">Southwest Research Institute</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://swri.org">http://swri.org</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>Continued standards developement and began taking leadership oppurtunities within the project space.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Assisted in standards development for a SOAP / UDP-multicast / UDP-syslog based communications architecture for US Army ground combat vehicles known as VICTORY</p></p></li>
+              <li><p><p>Software team lead for the Army’s Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment</p></p></li>
+              <li><p><p>Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-6"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2012</span>
+              <span class="endDate">- Sep 2014</span>
+            </div>
+            <div class="position">Engineer</div>
+            <div class="company">Southwest Research Institute</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://swri.org">http://swri.org</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>First position post graduation. Worked to test and integrate boost/libqt C++ code base and real systems on vehicles.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Led software validation experiments developing software components to demonstrate VICTORY Specifications.</p></p></li>
+              <li><p><p>Assisted in system integration for US Army field demo of situation awareness vehicle</p></p></li>
+              <li><p><p>Assistant project manager and engineer for a combat vehicle high performance video bus architecture.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-7"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2012</span>
+              <span class="endDate">- Jun 2012</span>
+            </div>
+            <div class="position">Intern</div>
+            <div class="company">XFAB</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://xfab.com">http://xfab.com</a>
+          </span>        <div class="item" id="work-item">
+            <div class="summary"><p><p>High voltage and GaN substrate applied research</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Volunteer</h2>
+      </header>
+      <section id="volunteer">
+        <section class="volunteer-item">
+    
+          <label for="volunteer-item-0"></label>
+    
+          <header class="clear">
+             <div class="date">
+              <span class="startDate">
+                Nov 2019
+              </span>
+              <span class="endDate">
+                - Feb 2021
+              </span>
+            </div>
+            <div class="header-left">
+              <div class="position">
+                Volunteer
+              </div>
+              <div class="organization">
+                Historic Boulder
+              </div>
+            </div>
+           
+          </header>
+          <div class="item">
+            <div class="summary"><p><p>Event volunteer and tech support volunteer</p></p></div>
+          </div>
+        </section>
+        <section class="volunteer-item">
+    
+          <label for="volunteer-item-1"></label>
+    
+          <header class="clear">
+             <div class="date">
+              <span class="startDate">
+                Jun 2013
+              </span>
+              <span class="endDate">
+                - Feb 2014
+              </span>
+            </div>
+            <div class="header-left">
+              <div class="position">
+                Volunteer Judge
+              </div>
+              <div class="organization">
+                Alamo Regional Science Fair
+              </div>
+            </div>
+           
+          </header>
+          <div class="item">
+            <div class="summary"><p><p>Volunteered at multiple science fairs judging Math, Engineering, and Computer Science projects.</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="endDate">
+              - 2012
+              </span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                Bachelor
+              </div>
+              <div class="area">
+                Electrical Engineering
+              </div>
+              <div class="institution">
+                Texas Tech University
+              </div>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Mathematics -  Minor</li>
+          </ul>
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> Grade:</strong> <span>Magna Cum Laude</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native speaker</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Hiking
+          </h3>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Baking
+          </h3>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Pizza
+          </h3>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            My Dogs
+          </h3>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>References</h2>
+      </header>
+      <section id="references">
+        <div class="item">
+          <div class="name">
+            Available upon request
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </body>
+</html>

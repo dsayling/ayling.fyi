@@ -94,7 +94,7 @@ const config: Config = {
           label: 'Tutorials',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {to: '/example', label: 'Resume', position: 'left'},
+        {to: '/resume', label: 'Resume', position: 'left'},
       ],
     },
     footer: {
