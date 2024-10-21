@@ -1,19 +1,39 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+python:
+  label: Python
+  permalink: /python
+  description: Python articles
 
-hello:
+welcome:
   label: Hello
   permalink: /hello
-  description: Hello tag description
+  description: Hello tag
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+software-development:
+  label: Software Development
+  permalink: /software-dev
+  description: Software Development articles
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+devops:
+  label: DevOps
+  permalink: /devops
+  description: Devops Articles
+
+automation:
+  label: Automation
+  permalink: /automation
+  description: Automation articles
+
+testing:
+  label: Testing
+  permalink: /testing
+  description: Testing articles
+
+bdd:
+  label: Behavior-Driven Development
+  permalink: /bdd
+  description: Behavior-Driven Development
+
+about:
+  label: About
+  permalink: /about
+  description: About me articles
