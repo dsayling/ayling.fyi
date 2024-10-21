@@ -4,19 +4,19 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Drew Ayling',
-  tagline: 'DevOps Connoisseur, Python Enthusiast, System Architect',
+  tagline: 'DevOps Connoisseur | Python Enthusiast | System Architect',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://dsayling.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/ayling.fyi',
+  baseUrl: '/ayling.fyi/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'dsayling', // Usually your GitHub org/user name.
-  projectName: 'dsayling-blog', // Usually your repo name.
+  projectName: 'ayling.fyi', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
