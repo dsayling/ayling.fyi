@@ -12,6 +12,8 @@ Instead, this is a simple list of must-know core development and workflow tools 
 You can find a simple bulleted list of all tools with links at the bottom.
 <!-- truncate -->
 
+This article was originally published on medium: [Must Know Tools For Any Python Developer](https://dsayling.medium.com/must-know-tools-for-any-python-developer-e349c144de13)
+
 ## poetry
 [poetry](https://python-poetry.org/) is the current leader in python dependency management and packaging. With over 24k GitHub stars, it exploded in use over pipenv very quickly.
 poetry is not the fastest at everything and commands like poetry shell not working because your virtualenv is [active somewhere](https://github.com/python-poetry/poetry/issues/5323) dampen the experience slightly, but you adapt.

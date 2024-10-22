@@ -1,5 +1,5 @@
 ---
-slug: TCM Sucks
+slug: TCM-Sucks
 title: Test Case Management Should Not Be This Difficult
 authors: [dsayling]
 tags: [automation, testing, devops, software-development]
@@ -8,6 +8,8 @@ tags: [automation, testing, devops, software-development]
 There are tons of important factors that can have a significant impact on the effectiveness and efficiency of a testing process for a modern software organization. Still, nothing can get in the way more than a terrible test case management tool.
 
 <!--truncate-->
+
+This article was originally published on medium: [Test Case Management Should Not Be This Difficult](https://dsayling.medium.com/test-case-management-should-not-be-this-difficult-3015286ea4f1)
 
 As a huge believer of continuous testing and DevOps release principles, using a test case management solution is more of a hindrance than a help to improving lead-time, process-time, and %C/A. Assuming you have a robust pipeline, with individual product development pipelines aligned to business value streams (with loosely couple products) and tests blocking your release, you don't need complex test reports or complicated requirements tracking (pssst, it should just be built into the pipeline).
 

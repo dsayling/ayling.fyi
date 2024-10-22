@@ -100,15 +100,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Tutorial',
-        //       to: '/docs/intro',
-        //     },
-        //   ],
-        // },
         {
           title: 'Socials',
           items: [
@@ -145,6 +136,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['Bash', 'Gherkin'],
     },
   } satisfies Preset.ThemeConfig,
 };
