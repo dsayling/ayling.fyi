@@ -37,3 +37,8 @@ about:
   label: About
   permalink: /about
   description: About me articles
+
+yaml:
+  label: YAML
+  permalink: /Yaml
+  description: Articles about YAML
