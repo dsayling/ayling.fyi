@@ -48,5 +48,4 @@ I've also realized while ytt has some great documentation, some simple playbook 
 
 So let's get started.
 
-Go see how to use [ytt in my tutorial section](../../docs/ytt/)
-
+Go see how to use [ytt in my tutorial section](../../docs/category/ytt-basics)
