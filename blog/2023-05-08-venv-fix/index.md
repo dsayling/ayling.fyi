@@ -34,7 +34,6 @@ See it in action:
 
 ![poetry fix](./solved.gif)
 
-
 ## Why does this work?
 
 The `venv` module in Python automatically sets the `$VIRTUAL_ENV` environment variable. So this works not just with poetry, but with anything using the built-in `venv` package.

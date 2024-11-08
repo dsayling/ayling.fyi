@@ -25,30 +25,33 @@ I’ll be referencing key principles and lessons learned in my previous article,
 Today, I want to talk about how I’m currently rolling out Behavior-Driven Development after considering my lessons learned.
 
 ## How We Got Here \[Again\]
+
 A part of the large organization that I work for is completely transforming its value stream.
 
 Obviously, they are now in need of new requirements and even new tests as they begin to understand how they are delivering value within a larger value stream.
 
 Consequently, I began hearing these (possibly embellished) phrases in meetings:
 
->No one can read these requirements. How are teams supposed to write automated tests? — Director Person
+> No one can read these requirements. How are teams supposed to write automated tests? — Director Person
 
->We need to be able to easily track the requirements being written and know when they are automated. — Principal Engineer-ish
+> We need to be able to easily track the requirements being written and know when they are automated. — Principal Engineer-ish
 
->What about the test reports? — Non-software Manager
+> What about the test reports? — Non-software Manager
 
->The spreadsheet you created is already out of date based on the implementation of these tests — Me
+> The spreadsheet you created is already out of date based on the implementation of these tests — Me
 
 ### So, what did I do?
+
 While I was in a meeting with some of the stakeholders I unconsciously said something to the effect of:
 
 > Look, BDD kind of sucks.<br/>
-I’ve used it in a past life, and I’ve even written about how I really don’t like using it, but… I see where it could solve our problems.<br/>
-My only request is that we try to do it right.
+> I’ve used it in a past life, and I’ve even written about how I really don’t like using it, but… I see where it could solve our problems.<br/>
+> My only request is that we try to do it right.
 
 **So, we got to work.**
 
 ## The Big Three
+
 1. Difficulty with adoption
 1. Complexity in scenarios
 1. Unwieldy Automation
@@ -59,58 +62,61 @@ My goal is to take the lessons I’ve learned and make sure they don’t happen 
 
 This is the first question I asked myself after agreeing to consider BDD that day.
 
->How do I make sure these people really understand the point of BDD and not just see it as some kind of “shortcut” to automated testing?
+> How do I make sure these people really understand the point of BDD and not just see it as some kind of “shortcut” to automated testing?
 
 I put my foot down with the enthusiastic principal engineer ready to begin writing scenarios the same day I told him about BDD and gherkin.
 
 My foot included:
 
-* **Training** — People must learn how to write BDD and gherkin in a declarative way. And, folks should learn when BDD automation is appropriate, and when it’s unnecessary.
-* **Purpose-driven test automation** — We must use a well-supported testing framework and not a bespoke one built totally and only for BDD. We must clearly delineate our business logic and technical logic in testing.
-* **Source of truth in scenarios** — Even if the test is still manual, the requirement must go into the codebase as a scenario, no external test case management.
-* **Buy-in** — We must all buy into this and agree that BDD is going to be our approach across the teams.
+- **Training** — People must learn how to write BDD and gherkin in a declarative way. And, folks should learn when BDD automation is appropriate, and when it’s unnecessary.
+- **Purpose-driven test automation** — We must use a well-supported testing framework and not a bespoke one built totally and only for BDD. We must clearly delineate our business logic and technical logic in testing.
+- **Source of truth in scenarios** — Even if the test is still manual, the requirement must go into the codebase as a scenario, no external test case management.
+- **Buy-in** — We must all buy into this and agree that BDD is going to be our approach across the teams.
 
-Some harsh requirements, I know, but they felt necessary dealing with an immature development organization that is relatively new to the concept of *test-driven development*, let alone *acceptance test-driven development*.
+Some harsh requirements, I know, but they felt necessary dealing with an immature development organization that is relatively new to the concept of _test-driven development_, let alone _acceptance test-driven development_.
 
 So let’s see how this approach can help us through **the big three**.
 
 ### Difficulty with adoption
+
 By pushing **Training** early, ensuring **Source of truth in scenarios**, and getting organizational **Buy-in**, we can solve most of the issues we find in adoption.
 
-1. Requirements Specifiers ***must*** adopt BDD Practices ✅
-1. Developers ***should*** contribute when writing scenarios ⚠️
-1. QA is ***not*** the only org “doing BDD” ✅
+1. Requirements Specifiers **_must_** adopt BDD Practices ✅
+1. Developers **_should_** contribute when writing scenarios ⚠️
+1. QA is **_not_** the only org “doing BDD” ✅
 
-Our flagged potential problem can be mediated by ensuring the developers *continue* to participate in the process — not just when a test fails or when they have to sit in a meeting about it. We must include everyone in the organization that cares about these requirements in the PR review process.
+Our flagged potential problem can be mediated by ensuring the developers _continue_ to participate in the process — not just when a test fails or when they have to sit in a meeting about it. We must include everyone in the organization that cares about these requirements in the PR review process.
 
-Organizational *Buy-in* is required to ensure requirements specifiers adopt BDD Practices when writing requirements. This also ensures that BDD is not only adopted by QA, who are often the culprits at rolling it out with little plan or foresight.
+Organizational _Buy-in_ is required to ensure requirements specifiers adopt BDD Practices when writing requirements. This also ensures that BDD is not only adopted by QA, who are often the culprits at rolling it out with little plan or foresight.
 
 ### Complexity in scenarios
+
 With both **Training** and a **Purpose-driven test automation** framework — built around best practices for testing and test-driven development — we can contain some of the problems that come from complex and verbose BDD scenarios.
 
-1. Scenarios ***must*** be written in a declarative format rather than imperative ✅
-1. Non-deterministic or fault-tolerant systems can ***still*** be difficult to express in Gherkin ⚠️
-1. Complex scenarios ***must not** be written ✅
+1. Scenarios **_must_** be written in a declarative format rather than imperative ✅
+1. Non-deterministic or fault-tolerant systems can **_still_** be difficult to express in Gherkin ⚠️
+1. Complex scenarios **\*must not** be written ✅
 
 Let’s look at the ones with our check mark first.
 
-We can avoid complex scenarios by steering clear of imperative gherkin steps and enforcing a declarative style. This can be achieved through **
+We can avoid complex scenarios by steering clear of imperative gherkin steps and enforcing a declarative style. This can be achieved through \*\*
 **Training** and tools like a linter. The technical complexity of the system must be abstracted away from the scenario authors so they can interact with the system as an end user.
 
-Utilizing **Purpose-driven test automation** encourages us to isolate our *business layer* (think [Arrange, Act, Assert, Cleanup](https://docs.pytest.org/en/6.2.x/fixture.html#what-fixtures-are)) from our technical layer (think REST API calls, page-object-models, database connectors).
+Utilizing **Purpose-driven test automation** encourages us to isolate our _business layer_ (think [Arrange, Act, Assert, Cleanup](https://docs.pytest.org/en/6.2.x/fixture.html#what-fixtures-are)) from our technical layer (think REST API calls, page-object-models, database connectors).
 
-Implementing **Purpose-driven test automation** also necessitates that the *technical layer* always considers how the *business layer* will use it, but only from the common API of Arrange, Act, Assert, and Cleanup.
+Implementing **Purpose-driven test automation** also necessitates that the _technical layer_ always considers how the _business layer_ will use it, but only from the common API of Arrange, Act, Assert, and Cleanup.
 
 Non-deterministic or fault-tolerant systems can still be challenging to articulate accurately, but with **Training** and **Purpose-driven test automation**, it is possible to simplify the complexity within the business layer and manage intricacies, e.g. model threshold validations, by ensuring the logic exists within the technical layer.
 
 ### Unwieldy Automation
+
 Having already talked a lot about the importance of having a **Purpose-driven test automation** framework and **Training**, we’ve pretty much already covered the traps we might fall into.
 
-1. Imperative scenarios ***don’t exist*** to translate into imperative steps. ✅
-1. Automation ***must not*** be coupled with features and must be reusable. ✅
-1. Lack of connection to requirements tools, ***because we don’t need one***! ✅
+1. Imperative scenarios **_don’t exist_** to translate into imperative steps. ✅
+1. Automation **_must not_** be coupled with features and must be reusable. ✅
+1. Lack of connection to requirements tools, **_because we don’t need one_**! ✅
 
-By isolating the *business* and *technical layers* of our automation in our **Purpose-driven test automation framework**, and providing specific **Training** on writing declarative scenarios, we can prevent the use of imperative steps and enable the creation of reusable automation that is independent from the tests themselves.
+By isolating the _business_ and _technical layers_ of our automation in our **Purpose-driven test automation framework**, and providing specific **Training** on writing declarative scenarios, we can prevent the use of imperative steps and enable the creation of reusable automation that is independent from the tests themselves.
 
 And since it was decided that we’ll have the **Source of truth** in scenarios, there’s no need to worry about the need to connect to a requirements tool. The requirements are right there in the code! If we need to check if the requirement has been executed, we simply check the CI results to see if the scenario has been executed.
 

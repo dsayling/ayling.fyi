@@ -5,7 +5,7 @@ authors: [dsayling]
 tags: [automation, testing, devops, software-development]
 ---
 
-I have worked in various organizations with different software development pipelines as a software developer, automation engineer, test engineer, DevOps engineer, etc. In all that time, I have never seen a *perfect pipeline*. Now, all development pipelines have room for improvement, but I’ve never seen a genuinely bulletproof one with built-in metrics, complete and total automation, and fast feedback.
+I have worked in various organizations with different software development pipelines as a software developer, automation engineer, test engineer, DevOps engineer, etc. In all that time, I have never seen a _perfect pipeline_. Now, all development pipelines have room for improvement, but I’ve never seen a genuinely bulletproof one with built-in metrics, complete and total automation, and fast feedback.
 
 <!--truncate-->
 
@@ -68,6 +68,7 @@ How the code is staged is entirely dependent on the infrastructure and end produ
 Continuous Deployment techniques explained below could provide methods for staging and deploying.
 
 ## Continuous Deployment
+
 Continuous Deployment and Continuous Delivery/Release may sound the same to many, and people regularly use them interchangeably, but these terms are different. Developers should architect their software and their pipeline to decouple deployment from release.
 
 Like when staging new code, deploying new code depends on the infrastructure and release paradigms. However, these paradigms can apply to many applications, not just SaaS applications (which we’ll have to save for another time).

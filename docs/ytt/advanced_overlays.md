@@ -74,9 +74,9 @@ If we know the name of the service we want to update, we can use the `name` fiel
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by="name"
-- name: api-server
-  replicas: 4
+  #@overlay/match by="name"
+  - name: api-server
+    replicas: 4
 ```
 
 You can also use `overlay.subset` to match on a subset of the configuration.
@@ -87,10 +87,9 @@ You can also use `overlay.subset` to match on a subset of the configuration.
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by=overlay.subset({"name": "api-server"}), expects="0+"
-- replicas: 4
+  #@overlay/match by=overlay.subset({"name": "api-server"}), expects="0+"
+  - replicas: 4
 ```
-
 
 ### Lambda Functions
 
@@ -104,8 +103,8 @@ We can also define an overlay to update the `replicas` of any `api` service to `
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by=lambda i, left, right: "api" in left['name'], expects="0+"
-- replicas: 4
+  #@overlay/match by=lambda i, left, right: "api" in left['name'], expects="0+"
+  - replicas: 4
 ```
 
 #### Regular Expressions
@@ -119,8 +118,8 @@ We can also use regular expressions to match on a condition.
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by=lambda i, left, right: regexp.match("^api", left["name"]), expects="0+"
-- replicas: 4
+  #@overlay/match by=lambda i, left, right: regexp.match("^api", left["name"]), expects="0+"
+  - replicas: 4
 ```
 
 #### Multiple Conditionals
@@ -135,9 +134,8 @@ For example, if we want to update the `replicas` to now be `2` for any service w
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by=lambda i, left, right: "api" in left['name'] and len(left['ports']) > 1, expects="0+"
--
-  replicas: 2
+  #@overlay/match by=lambda i, left, right: "api" in left['name'] and len(left['ports']) > 1, expects="0+"
+  - replicas: 2
 ```
 
 ### Updates in the Match Block
@@ -150,12 +148,12 @@ You can also update the field you're matching on too.
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by=lambda i, left, right: "api" in left['name'], expects="0+"
-- name: deployment
-  replicas: 4
+  #@overlay/match by=lambda i, left, right: "api" in left['name'], expects="0+"
+  - name: deployment
+    replicas: 4
 ```
 
-In this example, we're updating the `name` field to `deployment`replicas` to `4` for any service with `api` in the name.
+In this example, we're updating the `name` field to `deployment`replicas`to`4`for any service with`api` in the name.
 
 ### overlay.replace
 
@@ -167,10 +165,9 @@ We can also use `overlay.replace` to update the configuration. Here we're updati
 #@overlay/match by=overlay.all
 ---
 databases:
-#@overlay/match by=overlay.all, expects="1+"
--
-  #@overlay/replace via=lambda left, right: left.replace("-db", "-database")
-  name: ""
+  #@overlay/match by=overlay.all, expects="1+"
+  - #@overlay/replace via=lambda left, right: left.replace("-db", "-database")
+    name: ""
 ```
 
 ### Functions
@@ -187,10 +184,9 @@ We can also use a function to update the `name` field to replace `-db` with `-da
 #@overlay/match by=overlay.all
 ---
 databases:
-#@overlay/match by=overlay.all, expects="1+"
--
-  #@overlay/replace via=rename_db
-  name:
+  #@overlay/match by=overlay.all, expects="1+"
+  - #@overlay/replace via=rename_db
+    name:
 ```
 
 #### Reusing functions
@@ -207,18 +203,16 @@ We can also reuse functions across multiple overlays. Here we're using the `rena
 #@overlay/match by=overlay.all
 ---
 services:
-#@overlay/match by=overlay.all, expects="0+"
--
-  #@overlay/replace via=rename_server
-  name:
-
-load_balancers:
-#@overlay/match by=overlay.all, expects="0+"
--
-  target_services:
   #@overlay/match by=overlay.all, expects="0+"
   - #@overlay/replace via=rename_server
-    ""
+    name:
+
+load_balancers:
+  #@overlay/match by=overlay.all, expects="0+"
+  - target_services:
+      #@overlay/match by=overlay.all, expects="0+"
+      - #@overlay/replace via=rename_server
+        ""
 ```
 
 ### Replacing Keys
@@ -235,9 +229,9 @@ You can also replace keys in the configuration. Here we're going to replace `tar
 #@overlay/match by=overlay.all
 ---
 load_balancers:
-#@overlay/match by=overlay.all, expects="0+"
-#@overlay/replace via=rename_target_services
--
+  #@overlay/match by=overlay.all, expects="0+"
+  #@overlay/replace via=rename_target_services
+  -
 ```
 
 ---
