@@ -22,10 +22,9 @@ About 3 years ago, not too long after joining my previous company I stumbled acr
 
 I was slightly mortified after dealing with jinja and wanting templating to be gone from my life, but I began reading none the less.
 
-
 ### What is ytt?
 
->[ytt](https://carvel.dev/ytt/) is a command-line tool used to template and patch YAML files. It also provides the means to collect fragments and piles of YAML into modular chunks for easy re-use.
+> [ytt](https://carvel.dev/ytt/) is a command-line tool used to template and patch YAML files. It also provides the means to collect fragments and piles of YAML into modular chunks for easy re-use.
 
 I mean that seems pretty straightforward. The goal of ytt is to provide a way to maintain a bunch of YAML files without it becoming too cumbersome. So that could mean, kubernetes manifests, helm charts, or even just a bunch of configuration files.
 

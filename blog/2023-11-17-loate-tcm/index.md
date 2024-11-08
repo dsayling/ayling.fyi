@@ -28,6 +28,7 @@ Instead, they treat automation as an afterthought, pushing it to the margins and
 ---
 
 # Lost in Translation: Requirements Edition
+
 In the realm of testing, clarity is king.
 
 Alas, some test case management tools seem to have skipped their language lessons, leaving us drowning in a sea of miscommunication.
@@ -39,6 +40,7 @@ Mediocre integrations are the standard here. They advertise a Jira integration, 
 ---
 
 # Reporting: A Symphony of Banality
+
 Picture this: a dull collection of mind-numbing reports, lacking the finesse and sophistication worthy of a true engineer to fine-tune and optimize their craft.
 
 All too often, these test case management tools offer rigid reporting options that fail to capture the essence of our craft.
@@ -50,6 +52,7 @@ We’re left with a one-size-fits-all approach that’s about as exciting as wat
 ---
 
 # Maintenance: The Never-Ending Tedious Task
+
 Ah, test suite maintenance, the mundane repetitive task of automation teams.
 
 And what better way to magnify the pain than with clunky interfaces, convoluted workflows, and test case versioning nightmares?
@@ -64,6 +67,7 @@ These tools are often catered for antiquated processes. Whenever there is an upd
 ---
 
 # Compatibility: A Fair Tale Gone Wrong
+
 Once upon a time, we dreamed of compatibility, of seamless integration with our beloved automation frameworks and tools. Sadly, reality had other plans. These test case management tools have become the meddling in-laws of our automation ecosystem, forcing us into endless compromises, frustrating workarounds, and custom integration nightmares. What pytest plug-in should we make this month? Oh… you need it in Ruby? Give me six months.
 
 ---
@@ -75,14 +79,17 @@ In the age of teamwork and camaraderie, these tools seem determined to keep us i
 ---
 
 # CI/CD Integration: The Dance of Incompatibility
+
 [As automation and DevOps teams strive for the holy-grail of agility](https://dsayling.medium.com/the-perfect-development-pipeline-doesnt-exist-12bfbb8c9f92), these tools seem hell-bent on tripping us at every step. Seamless integration with CI/CD pipelines? Trololll. These test case management tools mock us with their lackluster integrations, causing friction, delays, and unnecessary hurdles in our quest for rapid test execution and quick product delivery. Network instability on their side. No generic CI tooling. You have a Jenkins plug-in? Sorry we abandoned Jenkins five years ago.
 
 # Test Data Management: A Kafkaesque Nightmare
+
 In the realm of automation testing, test data is our lifeblood. But oh, how these tools delight in tormenting us! Their feeble attempts at test data management lead us down a labyrinth of data redundancy, setup woes, and maintenance nightmares. It’s as if they’re conspiring to drain the life force from our automation endeavors. I don’t know how many times I’ve ended up building my own test result database (or some hacked representation of one), simply because they suck at showing us the data.
 
 ---
 
 # Conclusion:
+
 Stop using test case management tools.
 
 K. Thanx

@@ -21,7 +21,6 @@ ytt -f config.yaml -f my-values.yaml
 
 This command is the most basic form of using ytt. It takes our overlay file, `config.yaml`, and a source file, `my-values.yaml`, and outputs the templated configuration as a new yaml file.
 
-
 ### Your Input File
 
 Not to be confused with a "data-values" file? At it's most simplest, a yaml file can be used as a source file that's simply basic yaml. This is the data for the templating process.
@@ -47,21 +46,20 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: myapp
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 500m
-            memory: 512Mi
-          requests:
-            cpu: 250m
-            memory: 256Mi
+        - name: myapp
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 250m
+              memory: 256Mi
 ```
 
 If we want to remove the resource limits, we can use ytt's overlay feature. Create the file called config.yaml
-
 
 ### An Overlay File
 
@@ -73,11 +71,10 @@ spec:
   template:
     spec:
       containers:
-      #@overlay/match by=overlay.subset({"name": "myapp"})
-      - resources:
-          #@overlay/remove
-          limits:
-
+        #@overlay/match by=overlay.subset({"name": "myapp"})
+        - resources:
+            #@overlay/remove
+            limits:
 ```
 
 ### Putting it all together
@@ -106,14 +103,14 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: myapp
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            cpu: 250m
-            memory: 256Mi
+        - name: myapp
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
 ```
 
 What happened here? The overlay file removed the `limits` section from the `resources` section of the container.
@@ -167,7 +164,6 @@ Note the following:
 
 We'll go into more detail on the overlay file in the next section, but keep these points in mind as you work with ytt.
 
-
 Now run the command:
 
 ```bash
@@ -192,17 +188,17 @@ spec:
         app: yourapp
     spec:
       containers:
-      - name: myapp
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 500m
-            memory: 512Mi
-          requests:
-            cpu: 250m
-            memory: 256Mi
+        - name: myapp
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 250m
+              memory: 256Mi
 ```
 
 Notice that the `app` label has been changed to `yourapp` in the output!

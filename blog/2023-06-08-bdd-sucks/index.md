@@ -19,7 +19,6 @@ When implementing BDD, it is crucial to establish a common language that all par
 
 By creating Gherkin scenarios, BDD helps ensure that everyone involved in the development process has a clear understanding of what the application should do and how it should behave under different circumstances.
 
-
 ```gherkin
 Feature: Login
     Login scenarios
@@ -70,6 +69,7 @@ def article_is_published():
 While BDD promises to deliver higher-quality software products, in practice, it can be a frustrating experience — ‘cause adopting BDD, well, sucks.
 
 ## The Problems
+
 Using BDD starts with the adoption and, if done poorly, can cause a lot of issues downstream.
 
 ### Difficulty with adoption
@@ -114,7 +114,7 @@ Lastly, if QA is usually the only one writing these scenarios, there is likely n
 
 BDD can be a really useful methodology for things like Acceptance Test Driven Development when automation via steps is reusable and scalable; Tests and their results are traceable to the requirements tool — ensuring you have coverage over your requirements. The dream of releasing with fewer bugs and cleaner feature coverage.
 
-> *The problem is so many folks just simply use it wrong.*
+> _The problem is so many folks just simply use it wrong._
 
 BDD is not a silver bullet and requires collaboration from all members of the team to be successful. To avoid the pitfalls that I’ve experienced, it’s important to have buy-in from all team members, including product managers, developers, and testers, and to invest in a well-designed automation architecture that supports reusability and maintainability. By doing so, an organization can reap the benefits of BDD and deliver high-quality software that meets the needs of customers.
 

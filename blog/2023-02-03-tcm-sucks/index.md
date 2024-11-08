@@ -16,6 +16,7 @@ As a huge believer of continuous testing and DevOps release principles, using a 
 That said, some organizations still want external test case management tools for either manual QEs, management, or auditing. I would argue that using a test case management tool for these stakeholders won't give them the "quality" improvements and tracking they want. These are all personal opinions based on my experience with various test case management tools.
 
 ## Shopping Around
+
 When shopping for the best test case management tool for you, you will usually focus on the following:
 
 **Cost**: Is the tool within your budget? (Don't overpay for a solution and check for hidden costs, e.g., storage allowance, person-hours for workflow integration and training, long term maintenance)
@@ -39,7 +40,6 @@ Some popular test case management tools include:
 - ALM/QC (formerly HP ALM/QC, THE waterfall project and quality tool for dinosaurs)
 - This list could go on for a while
 
-
 ## The Problems
 
 ### Terrible automated test integration
@@ -57,6 +57,7 @@ What about requirements, er, I mean, "Reference" tracking? A user has to do the 
 ![Command line argument from trcli](./trcli.png)
 
 ### Suboptimal requirements tracking
+
 If a test case management tool doesn't provide effective means to track requirements, it can be challenging to ensure that your testing is comprehensive.
 
 The goal is simple, right? I get a requirement, write a test for it, run the test, and mark the requirement as covered for some cycle, release, milestone, etc. If only the tools had made it that simple.
@@ -70,6 +71,7 @@ TestRail goes off the rails even further. They offer, what they call, a Jira int
 You can't build a JQL report using IDs from TestRail. The simple reason why is that TestRail doesn't update the JIRA database. The results and cases that appear on the issue are just iframes where the JIRA ID is part of the request for the iframe. This lack of proper integration makes querying for coverage across multiple JIRA issues impossible with JQL.
 
 ### Poor test case organization
+
 If a test case management tool doesn't provide a flexible and intuitive way to organize your test cases, it can be challenging to keep track of your testing progress, and you may miss essential tests or waste time trying to find the proper tests to run.
 
 I see this all the time. Every individual has their own way of doing things, and so does every test case management tool such as Projects, Test Suites, Test Groups, etc. These test case categorizations typically map to some test result categorization like Plans, Runs, Cycles, Milestones, etc.
@@ -93,4 +95,5 @@ Most tools, whether self-hosted or cloud-based, provide some report interface to
 For the third time, I'm currently building a custom database solution to add automated test results and exporting manual runs to a database for visualization in some corporate tool. In this case, Tableau. \*\*shakes fist\*\*
 
 ## Now what?
+
 These issues demonstrate the importance of carefully evaluating test case management tools before committing to one. Finding a tool that meets your specific needs and provides the best support for your testing process is crucial. If the practices and processes in the QA organization are not well flushed out and you don’t have agreed-upon usage and understanding of the test tool, you’re gonna to have a bad time. If you have found a tool you like, please share your positive experiences with others in the comments to help them find a tool that works for them.

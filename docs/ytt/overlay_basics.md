@@ -42,10 +42,10 @@ spec:
   template:
     spec:
       containers:
-      #@overlay/match by=overlay.subset({"name": "myapp"})
-      - resources:
-          #@overlay/remove
-          limits:
+        #@overlay/match by=overlay.subset({"name": "myapp"})
+        - resources:
+            #@overlay/remove
+            limits:
 ```
 
 ### Merging Maps aka Updating Maps
@@ -75,9 +75,9 @@ spec:
   template:
     spec:
       containers:
-      #@overlay/append
-      - name: sidecar
-        image: sidecar:latest
+        #@overlay/append
+        - name: sidecar
+          image: sidecar:latest
 ```
 
 In this overlay, we're appending a new sidecar container to the `containers` list.
@@ -94,13 +94,14 @@ spec:
   template:
     spec:
       containers:
-      #@overlay/match by=overlay.index(0)
-      #@overlay/insert before=True
-      - name: init-container
-        image: init:latest
+        #@overlay/match by=overlay.index(0)
+        #@overlay/insert before=True
+        - name: init-container
+          image: init:latest
 ```
 
 ### Removing from Lists
+
 In this overlay, we're removing the container with the name `myapp` from the `containers` list.
 
 ```yaml title="remove_from_list.yaml"
@@ -111,10 +112,11 @@ spec:
   template:
     spec:
       containers:
-      #@overlay/match by=overlay.subset({"name": "myapp"})
-      #@overlay/remove
-      -
+        #@overlay/match by=overlay.subset({"name": "myapp"})
+        #@overlay/remove
+        -
 ```
+
 ---
 
 Next, lets go into some more advanced overlay techniques.
