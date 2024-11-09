@@ -75,7 +75,9 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    metadata: [
+      {name: 'keywords', content: 'python, tutorials, devops, testing, bdd, blog'},
+    ],
     image: "img/social-card.png",
     navbar: {
       title: "Drew Ayling",
