@@ -78,6 +78,15 @@ const config: Config = {
     metadata: [
       {name: 'keywords', content: 'python, tutorials, devops, testing, bdd, blog'},
     ],
+    headTags: [
+      {
+        tagName: 'link',
+        attributes: {
+          rel: 'preconnect',
+          href: 'https://ayling.fyi',
+        },
+      },
+    ],
     image: "img/social-card.png",
     navbar: {
       title: "Drew Ayling",
