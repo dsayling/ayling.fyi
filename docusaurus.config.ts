@@ -76,14 +76,17 @@ const config: Config = {
 
   themeConfig: {
     metadata: [
-      {name: 'keywords', content: 'python, tutorials, devops, testing, bdd, blog'},
+      {
+        name: "keywords",
+        content: "python, tutorials, devops, testing, bdd, blog",
+      },
     ],
     headTags: [
       {
-        tagName: 'link',
+        tagName: "link",
         attributes: {
-          rel: 'preconnect',
-          href: 'https://ayling.fyi',
+          rel: "preconnect",
+          href: "https://ayling.fyi",
         },
       },
     ],
