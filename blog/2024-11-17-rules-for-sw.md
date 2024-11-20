@@ -1,5 +1,5 @@
 ---
-slug: rules for sw
+slug: rules-for-sw
 title: Drew's Rules to Deliver Value
 authors: [dsayling]
 tags: [software-development, devops]
