@@ -1,5 +1,8 @@
 ---
+slug: rules for sw
 title: Drew's Rules to Deliver Value
+authors: [dsayling]
+tags: [software-development, devops]
 ---
 
 I compiled this list after leaving a prominent DevOps company that I’ll keep anonymous. Observing their stagnant state for the entire year I was there, I was certain that my contributions wouldn’t be valuable to the company in the long run. Nevertheless, I did learn a few valuable lessons from their company practices and the areas where they fell short.
@@ -18,6 +21,6 @@ Here they are:
 8. Integrate other business functions within the software development team. Collaboration between non-engineering and product groups is paramount. Even in high-performing organizations, this collaboration often ceases at “auxiliary” teams such as documentation, IT, support, and compliance. Teams such as sales, marketing, revenue, and others are excluded, which is a mistake. Align the customary key performance indicators (KPIs) with the value delivery of the software, and you are truly achieving excellence.
 9. Software developers should have a strong understanding of other parts of the business. Other business functions convey the value of the software you deliver, and understanding them can enable you to deliver even more customer value.
 10. Always be flexible and willing to trade costs whenever necessary. This requires human connection and conversation, not just risk calculation. Sometimes, that’s all you’ve got (skew the numbers however you need to!). Understand that you will encounter unknown unknowns.
-11. A generative culture does not mean “do what you want.” The primary business objectives still apply. If the work does not contribute to achieving these objectives, it should not be done. Teams should be able to understand how their value delivery aligns with these business objectives. Once they grasp this connection, enable them to achieve it as they see fit (assuming good engineering discipline) and ensure they can demonstrate the value. 
+11. A generative culture does not mean “do what you want.” The primary business objectives still apply. If the work does not contribute to achieving these objectives, it should not be done. Teams should be able to understand how their value delivery aligns with these business objectives. Once they grasp this connection, enable them to achieve it as they see fit (assuming good engineering discipline) and ensure they can demonstrate the value.
 
 Continuous delivery of new features with built-in quality assurance measures is crucial for enhancing customer value. Understanding the business value of work and quantifying the value of technical debt compared to feature value are essential for making informed business decisions. Collaboration between software development teams and other business functions is vital for aligning KPIs with value delivery and achieving excellence.
