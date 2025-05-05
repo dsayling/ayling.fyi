@@ -4,7 +4,7 @@ import Head from "@docusaurus/Head";
 
 export default function page() {
   return (
-    <Layout title="Page" description="A React page demo">
+    <Layout title="Page" description="Drew Ayling Resume">
       <Head>
         <meta property="og:image" content="image.png" />
         <meta name="twitter:card" content="summary_large_image" />
