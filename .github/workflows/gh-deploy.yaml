@@ -6,13 +6,39 @@ on:
       - main
 
 jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download gist
+        env:
+          GH_TOKEN: ${{ secrets.GH_GIST_PAT }}
+        run: gh gist view 1d37721f321070f6018947bfc4a8e9a5 -r | tee resume.json
+
+      - name: Install resume build
+        run: npm install -g resumed jsonresume-theme-kendall
+
+      - name: Build resume
+        run: |
+          resumed --theme jsonresume-theme-kendall
+
+      - uses: actions/upload-artifact@v4
+        name: Save HTML
+        with:
+          name: resume.html
+          path: resume.html
+
   build:
     name: Build Docusaurus
+    needs: build-resume
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: resume.html
+          path: static/
       - uses: actions/setup-node@v4
         with:
           node-version: 20
