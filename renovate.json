@@ -19,7 +19,7 @@
       "description": "Group React packages",
       "matchPackagePatterns": ["^react", "^@mdx-js/react"],
       "groupName": "React ecosystem",
-      "groupSlug":  "react"
+      "groupSlug": "react"
     },
     {
       "description": "Group all GitHub Actions updates",
