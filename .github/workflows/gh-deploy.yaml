@@ -10,10 +10,7 @@ jobs:
   build-resume:
     runs-on: ubuntu-latest
     steps:
-      - name: Download gist
-        env:
-          GH_TOKEN: ${{ secrets.GH_GIST_PAT }}
-        run: gh gist view 1d37721f321070f6018947bfc4a8e9a5 -r | tee resume.json
+      - uses: actions/checkout@v7
 
       - name: Install resume build
         run: npm install -g resumed jsonresume-theme-kendall
