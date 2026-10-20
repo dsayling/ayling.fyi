@@ -63,6 +63,14 @@ def test_power_mode_matches_model(model, vehicle):
 
 Same layer. Same source of truth. Two ways to use it.
 
+And look, we've done this before. If you've done any UI automation, you've used a Page Object Model.
+
+A page object is just a model of a page. It knows where the button is, how to fill in the field, how to tell if the page actually loaded. Your tests don't go hunting for elements all over the place, because the page object already did that work, once, in one place.
+
+And nobody argues about whether a page object should be “used by Gherkin or not.” Of course it can be. A step definition can call it. A plain test can call it. Whatever sits on top of it, the model underneath is the same, and that's kind of the whole point of building it.
+
+The architectural model is the same idea, just for a system instead of a page. Which, I know, is a bigger system. That's why it matters more, not less.
+
 Folks keep arguing about the top layer like it's the system. It isn't. Gherkin is just one way to talk to the model. Assertions are another. If you only build the top, you've built the part that reads nice in a review and nothing that scales.
 
 ## The part nobody builds
