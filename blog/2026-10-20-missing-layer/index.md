@@ -71,6 +71,14 @@ And nobody argues about whether a page object should be “used by Gherkin or no
 
 The architectural model is the same idea, just for a system instead of a page. Which, I know, is a bigger system. That's why it matters more, not less.
 
+And the deeper that model can go, the more capable the testing and validation can go.
+
+If your model only knows a message exists, all you can really test is that the message showed up. Congrats, I guess.
+
+If it knows the timing, the state transitions, the power sequence, which system woke which other system up, how this variant is supposed to be different from that one — now you can test how the system actually behaves. You can validate the weird cases. You can ask what happens when things happen in the wrong order, or at the wrong time.
+
+The depth of the model is the ceiling for the testing. You can't validate deeper than the thing you're validating against knows.
+
 Folks keep arguing about the top layer like it's the system. It isn't. Gherkin is just one way to talk to the model. Assertions are another. If you only build the top, you've built the part that reads nice in a review and nothing that scales.
 
 ## The part nobody builds
