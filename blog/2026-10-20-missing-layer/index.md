@@ -79,7 +79,7 @@ So each team writes down what it knows, in its own place, in its own format. The
 
 That doesn't scale, and honestly, it never did. We just didn't have systems this distributed, with this much state in this many places, where you could get away with it and not notice right away.
 
-In a complex system, state isn't in one place. It's the power mode, _and_ the message timing, _and_ the variant, _and_ what the last system that woke up did. If your automation doesn't have a model of that, you aren't testing the system. You're testing fragments of it and hoping they add up when somebody puts them on a vehicle.
+In a complex system, state isn't in one place. It's the power mode, _and_ the message timing, _and_ the variant, _and_ what the last system that woke up did. If your automation doesn't have a model of that, you aren't testing the system. You're testing fragments of it and hoping they add up when somebody puts them together (hope your car doesn't turn off while you're driving!).
 
 ## Use it on the real thing
 
