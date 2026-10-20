@@ -117,6 +117,6 @@ Now I think I was one layer too high when I said it.
 
 I want a model that one team builds and every team can use.<br/>
 I want safety and power to check against the same truth as the features do.<br/>
-I want to run that model against a real vehicle and get a straight answer.<br/>
+I want to run that model against the real thing and get a straight answer.<br/>
 
 I guess what I'm trying to say is, I want us to stop arguing about the sentences and go build the layer underneath them.
