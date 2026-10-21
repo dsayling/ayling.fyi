@@ -1,0 +1,201 @@
+{
+  "basics": {
+    "name": "Drew Ayling",
+    "label": "DevOps Connoisseur, Python Enthusiast, System Architect",
+    "email": "dsayling@gmail.com",
+    "location": {
+      "city": "Denver Metro Area",
+      "region": "Colorado"
+    },
+    "summary": "Experienced Software Engineer with a proven track record in the information technology and services sector. Proficient in DevOps, Software Architecture, Automated Software Testing, Software Delivery, and Compliance Testing. Committed to product-focused delivery and facilitating effective communication between development, quality assurance, release management, and support teams within enterprise agile environments. I have a preference for the dynamic nature of startups and am experienced in macOS/Linux environments, utilizing WSL when necessary. As a Python Developer, I have also worked with C++, Perl, and Go, and I am an active user of JavaScript and TypeScript for user interface and continuous integration applications. I advocate for DevOps as a strategy beneficial to both enterprises and developers, aligning my efforts with the goal of delivering value to customers, whether they are internal stakeholders or external clients. I take great satisfaction in dedicating my efforts to assist others.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "dsayling",
+        "url": "https://github.com/dsayling"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Drew Ayling",
+        "url": "https://www.linkedin.com/in/drew-ayling"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Development",
+      "keywords": [
+        "Python",
+        "Typescript / React",
+        "Go",
+        "Bash",
+        "Linux / OSX",
+        "Docker / Kubernetes",
+        "Saltstack / Ansible / Terraform",
+        "Jenkins / CircleCI / Github Actions"
+      ]
+    },
+    {
+      "name": "Competencies",
+      "keywords": [
+        "DevOps",
+        "Value Stream",
+        "Process Automation",
+        "Web Services",
+        "Open Standards",
+        "Software Testing",
+        "Scaled Agile / SAFe",
+        "System Architecture",
+        "Storage Appliances",
+        "Embedded Systems",
+        "Software Integration",
+        "Value Streams"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "name": "Ford Motor Company",
+      "position": "Staff Software Engineer",
+      "url": "http://ford.com",
+      "startDate": "2023-04-01",
+      "summary": "Replace this tiny tool called PREEVision"
+    },
+    {
+      "name": "Teladoc Health",
+      "position": "Staff Software Engineer",
+      "url": "http://teladochealth.com",
+      "startDate": "2021-03-01",
+      "endDate": "2023-04-01",
+      "summary": "Leading automation architecture team for the chronic care management group. Supporting test reporting, CI integrations, testing libraries, development pipelines and more.",
+      "highlights": [
+        "Leading the automation architecture team to re-architect existing test frameworks to align newly acquired product's delivery with the larger Teladoc org to reduce automation duplication and scale product delivery.",
+        "Leading an automation guild to present vision, intent, best practices, and architectural runway for testing and automation.",
+        "Created automated tooling to connect Teladoc's automated test cases with TestRail's test case management software to measure requirements and functional coverage. Contributing to open source projects to support this effort.",
+        "Worked with partner organizations and customers to create and maintain their own CI libraries for CircleCI, ranging from go-to-market assistance to paired programming with partner company developers.",
+        "Creating and maintaining test automation libraries for Livongo (Chronic Care Management) (acquired by Teladoc in 2020) products including web, mobile, backend, and ETL."
+      ]
+    },
+    {
+      "name": "CircleCI",
+      "position": "Community & Partner Engineer",
+      "url": "http://circleci.dev",
+      "startDate": "2020-06-01",
+      "endDate": "2021-03-01",
+      "summary": "Working with customers and partners in our open-source community to produce and maintain CircleCI ecosystem assets.",
+      "highlights": [
+        "Launched the CircleCI Developer Hub, a K8s microsite for CircleCI assets (Docker images and CI integrations), as a full-stack developer in React and Go.",
+        "Created and maintained CI libraries for dozens of languages and frameworks, e.g. Ruby, GKE, Python, Terraform, used by thousands of runs daily.",
+        "Supported open source community Docker images spanning various languages and frameworks, e.g. Python, Ruby, Android, Selenium, for use on CircleCI, each being used in almost 100,000 runs a week.",
+        "Worked with partner organizations and customers to create and maintain their own CI libraries for CircleCI, ranging from go-to-market assistance to paired programming with partner company developers.",
+        "Primary lead on restructuring CircleCI sample apps and configuration files to improve CircleCI onboarding experience."
+      ]
+    },
+    {
+      "name": "NetApp - SolidFire",
+      "position": "Sr. Software Engineer",
+      "url": "https://docs.netapp.com/us-en/element-software-123/storage/concept_intro_solidfire_system_overview.html",
+      "startDate": "2019-06-01",
+      "endDate": "2020-06-01",
+      "summary": "DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect.",
+      "highlights": [
+        "Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.",
+        "Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.",
+        "Architected end to end container and Kubernetes based serverless testing solution for disparate disconnected system tests that removed hundreds of manual hours for each release.",
+        "Coached other system architects in scaled agile best practices to enable predictable planning by reducing lead time in exploration phase by 75%.",
+        "Architected organizational value stream alignment with other system architects and SAFe practitioners to restructure the teams around value in order to increase delivery to the customer by a factor of 6."
+      ]
+    },
+    {
+      "name": "NetApp - SolidFire",
+      "position": "Software Engineer",
+      "url": "https://docs.netapp.com/us-en/element-software-123/storage/concept_intro_solidfire_system_overview.html",
+      "startDate": "2015-07-01",
+      "endDate": "2019-06-01",
+      "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test automation engineer's perspective.",
+      "highlights": [
+        "Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest.",
+        "Scrum master, architect and product owner for re-architecture of internal legacy automation python code base.",
+        "Automated systems administration tasks such as system monitoring, report generation, code deployment, package management, and server maintenance.",
+        "Designed and developed REST API SDK for external test case management software for use across multiple teams."
+      ]
+    },
+    {
+      "name": "Southwest Research Institute",
+      "position": "Research Engineer",
+      "url": "http://swri.org",
+      "startDate": "2014-09-01",
+      "endDate": "2015-07-01",
+      "summary": "Continued standards development and began taking leadership opportunities within the project space.",
+      "highlights": [
+        "Assisted in standards development for a SOAP / UDP-multicast / UDP-syslog based communications architecture for US Army ground combat vehicles known as VICTORY.",
+        "Software team lead for the Army's Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment.",
+        "Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters."
+      ]
+    },
+    {
+      "name": "Southwest Research Institute",
+      "position": "Engineer",
+      "url": "http://swri.org",
+      "startDate": "2012-01-01",
+      "endDate": "2014-09-01",
+      "summary": "First position post graduation. Worked to test and integrate boost/libqt C++ code base and real systems on vehicles.",
+      "highlights": [
+        "Led software validation experiments developing software components to demonstrate VICTORY Specifications.",
+        "Assisted in system integration for US Army field demo of situation awareness vehicle.",
+        "Assistant project manager and engineer for a combat vehicle high performance video bus architecture."
+      ]
+    },
+    {
+      "name": "XFAB",
+      "position": "Intern",
+      "url": "http://xfab.com",
+      "startDate": "2012-01-01",
+      "endDate": "2012-06-01",
+      "summary": "High voltage and GaN substrate applied research."
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Historic Boulder",
+      "position": "Volunteer",
+      "startDate": "2019-11-01",
+      "endDate": "2021-02-01",
+      "summary": "Event volunteer and tech support volunteer."
+    },
+    {
+      "organization": "Alamo Regional Science Fair",
+      "position": "Volunteer Judge",
+      "startDate": "2013-06-01",
+      "endDate": "2014-02-01",
+      "summary": "Volunteered at multiple science fairs judging Math, Engineering, and Computer Science projects."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Texas Tech University",
+      "area": "Electrical Engineering",
+      "studyType": "Bachelor",
+      "endDate": "2012",
+      "score": "Magna Cum Laude",
+      "courses": ["Mathematics - Minor"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    { "name": "Hiking" },
+    { "name": "Baking" },
+    { "name": "Pizza" },
+    { "name": "My Dogs" }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
